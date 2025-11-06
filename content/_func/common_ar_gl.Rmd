@@ -21,17 +21,17 @@ ar_file_name <- file.path(rsc_dir, parquet)
 df_ar <- read_parquet(ar_file_name)
 
 # Time spans
-time_span1 <- "ts7989"
-time_span1_from <- 1979
-time_span1_to <- 1989
-time_span2 <- "ts9006"
-time_span2_from <- 1990
-time_span2_to <- 2006
-time_span3 <- "ts07A7"
-time_span3_from <- 2007
-time_span3_to <- 2017
-time_span4 <- "tsA8B5"
-time_span4_from <- 2018
+time_span1 <- "ts5374"
+time_span1_from <- 1953
+time_span1_to <- 1974
+time_span2 <- "ts7586"
+time_span2_from <- 1975
+time_span2_to <- 1986
+time_span3 <- "ts87A5"
+time_span3_from <- 1987
+time_span3_to <- 2015
+time_span4 <- "tsA6B5"
+time_span4_from <- 2016
 time_span4_to <- 2025
 
 # Locations
@@ -49,9 +49,9 @@ r_excl_lon_tr <- NULL
 r_excl_lat_tr <- NULL
 
 # Platforms with multiple locations
-platform1 <- "58US"
-platform2 <- "ITP-82"
-platform3 <- "TOP-4"
+platform1 <- "SHIP"
+platform2 <- "OW2252"
+platform3 <- "EXO13346"
 
 # Count variables for observation count density plots
 count1_1 <- "100"
@@ -60,10 +60,10 @@ count1_3 <- "2000"
 count2_1 <- "1"
 count2_2 <- "1"
 count3_1 <- "2"
-count3_2 <- "2"
+count3_2 <- "10"
 count4_1 <- "1000"
 count4_2 <- "2000"
-count5 <- "2000"
+count5 <- "6000"
 
 # Functions
 split_time_spans <- function(df) {
