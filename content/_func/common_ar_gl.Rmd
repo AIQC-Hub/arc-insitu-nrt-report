@@ -50,8 +50,8 @@ r_excl_lat_tr <- NULL
 
 # Platforms with multiple locations
 platform1 <- "SHIP"
-platform2 <- "OW2252"
-platform3 <- "EXO13346"
+platform2 <- "4902206"
+platform3 <- "NRUO"
 
 # Count variables for observation count density plots
 count1_1 <- "100"

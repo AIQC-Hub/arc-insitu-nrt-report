@@ -49,9 +49,9 @@ r_excl_lon_tr <- NULL
 r_excl_lat_tr <- NULL
 
 # Platforms with multiple locations
-platform1 <- "58US"
-platform2 <- "ITP-82"
-platform3 <- "TOP-4"
+platform1 <- "ITP-82"
+platform2 <- "58US"
+platform3 <- "TOP-10"
 
 # Count variables for observation count density plots
 count1_1 <- "100"
