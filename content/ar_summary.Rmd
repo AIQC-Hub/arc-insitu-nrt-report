@@ -77,7 +77,7 @@ res <- knitr::knit_child(text = src, quiet = TRUE)
 cat(res, sep = '\n')
 ```
 
-```{r, duplicate_details, results = 'asis'}
+```{r, duplicate_details2, results = 'asis'}
 src <- knitr::knit_expand(t_s_duplicate_across_details, df=df_filtered_name)
 res <- knitr::knit_child(text = src, quiet = TRUE)
 cat(res, sep = '\n')
@@ -93,3 +93,7 @@ cat(res, sep = '\n')
 ```
 
 ---
+
+```{r, cleanup, include = FALSE}
+rm(list = ls())
+```

@@ -8,8 +8,14 @@ region_code1 <- "AR"
 region_code2 <- "AR"
 parquet <- "netcdf_nrt_ar_2_summary.parquet"
 parquet_url <- file.path(release_url, parquet)
+parquet_qc1 <- "netcdf_nrt_ar_2_summary_qc1.parquet"
+parquet_qc4 <- "netcdf_nrt_ar_2_summary_qc4.parquet"
 df_name <- "df_ar"
+df_qc1_name <- "df_ar_qc1"
+df_qc4_name <- "df_ar_qc4"
 df_filtered_name <- "df_ar_filtered"
+df_qc1_filtered_name <- "df_ar_qc1_filtered"
+df_qc4_filtered_name <- "df_ar_qc4_filtered"
 
 # Path
 #rsc_dir <- "../../data/nrt_ar"
@@ -40,7 +46,7 @@ latitude_var_name <- "latitude"
 
 r_min_lon <- -180
 r_max_lon <- 180
-r_min_lat <- 50
+r_min_lat <- 60
 r_max_lat <-  90
 
 r_excl_lon_bl <- NULL
@@ -49,8 +55,8 @@ r_excl_lon_tr <- NULL
 r_excl_lat_tr <- NULL
 
 # Platforms with multiple locations
-platform1 <- "58US"
-platform2 <- "ITP-82"
+platform1 <- "ITP-82"
+platform2 <- "58US"
 platform3 <- "TOP-4"
 
 # Count variables for observation count density plots
