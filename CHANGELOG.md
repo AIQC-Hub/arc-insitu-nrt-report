@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [0.1.1] - 2025-11-10
+### Changed
+- All common functions copied from bal site
+
 ## [0.1.0] - 2025-11-06
 ### Added
 - Import Arctic Ocean pages form insitu-nrt-report

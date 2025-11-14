@@ -1,5 +1,5 @@
 ---
-title: "Temperature QC (AR)"
+title: "Temperature QC (GL)"
 description: |
   Basic analysis of the temperature QC data from the Arctic Ocean in situ NRT observations.
 output:
@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo=FALSE)
 
 # Common functions
 r_func_path <- "./_func"
-r_funcs <- c("libraries.Rmd", "common.Rmd", "common_ar.Rmd", "qc.Rmd")
+r_funcs <- c("libraries.Rmd", "common.Rmd", "common_ar_gl.Rmd", "qc.Rmd")
 
 # Variables
 var <- "temp"
