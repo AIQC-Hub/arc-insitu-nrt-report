@@ -1,28 +1,27 @@
 ---
-title: "Pressure (AR)"
+title: "Practical Salinity QC (GL)"
 description: |
-  Basic analysis of the pressure data from the Arctic Ocean in situ NRT observations.
+  Basic analysis of the salinity QC data from the Arctic Ocean in situ NRT observations.
 output:
   distill::distill_article:
     toc: true
     toc_depth: 2
 ---
 
-```{r, init, include = FALSE}
+```{r include = FALSE}
 knitr::opts_chunk$set(echo=FALSE)
 
 # Common functions
 r_func_path <- "./_func"
-r_funcs <- c("libraries.Rmd", "common.Rmd", "common_ar.Rmd", "var.Rmd")
+r_funcs <- c("libraries.Rmd", "common.Rmd", "common_ar_gl.Rmd", "qc.Rmd")
 
 # Variables
-var <- "pres"
-var_name <- "Pressure"
-var_label <- "Pres"
-
+var <- "psal"
+qc_var <- "psal_qc"
+qc_var_name <- "Practical salinity QC flag"
 ```
 
-```{r, import, include = FALSE, child=file.path(r_func_path, r_funcs)}
+```{r, import, child=file.path(r_func_path, r_funcs)}
 ```
 
 ```{r, load_qc_summary, include = FALSE}
@@ -39,8 +38,7 @@ res <- knitr::knit_child(text = src, quiet = TRUE)
 
 ## 1. Basic Information
 ```{r, basic_info, results = 'asis'}
-src <- knitr::knit_expand(t_v_basic_info)
-res <- knitr::knit_child(text = src, quiet = TRUE)
+res <- knitr::knit_expand(t_qc_basic_info)
 cat(res, sep = '\n')
 ```
 
@@ -48,33 +46,30 @@ cat(res, sep = '\n')
 
 ## 2. Summary Statistics
 ```{r, summary_stats, results = 'asis'}
-src <- knitr::knit_expand(t_v_summary_stats, df=df_filtered_name,
-                          df_qc1=df_qc1_filtered_name, df_qc4=df_qc4_filtered_name)
+src <- knitr::knit_expand(t_qc_summary_stats, df=df_filtered_name)
 res <- knitr::knit_child(text = src, quiet = TRUE)
 cat(res, sep = '\n')
 ```
 
 ---
 
-## 3. Distributions By Year
-```{r, distributions_year, results = 'asis'}
-src <- knitr::knit_expand(t_v_distributions_year)
+## 3. Distributions Over Time
+```{r, distributions, results = 'asis'}
+src <- knitr::knit_expand(t_qc_distributions, df=df_filtered_name)
 res <- knitr::knit_child(text = src, quiet = TRUE)
 cat(res, sep = '\n')
 ```
 
 ---
 
-## 4. Distributions By Month
-```{r, distributions_month, results = 'asis'}
-src <- knitr::knit_expand(t_v_distributions_month)
+## 4. Fraction of QC4 Flags per Profile
+```{r, fraction, results = 'asis'}
+src <- knitr::knit_expand(t_qc_qc4_proportion, df=df_filtered_name)
 res <- knitr::knit_child(text = src, quiet = TRUE)
 cat(res, sep = '\n')
 ```
 
 ---
-
 ```{r, cleanup, include = FALSE}
 rm(list = ls())
 ```
-
