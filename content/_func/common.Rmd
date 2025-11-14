@@ -13,7 +13,7 @@
 # Path
 rsc_dir <- "../../data"
 rsc_dir2 <- "../data"
-release_url <- "https://github.com/AIQC-Hub/arc-insitu-nrt-report/releases/download/v0.1.0"
+release_url <- "https://github.com/AIQC-Hub/bal-insitu-nrt-report/releases/download/v0.2.0"
 
 # Templates
 template_path <- "./_template"
@@ -38,6 +38,7 @@ t_s_duplicate_across <- file.path(template_path, "summary_duplicate_across.Rmd")
 t_s_duplicate_across_details <- file.path(template_path, "summary_duplicate_across_details.Rmd")
 t_s_observation_counts <- file.path(template_path, "summary_observation_counts.Rmd")
 t_location_filtering <- file.path(template_path, "location_filtering.Rmd")
+t_load_qc_summary <- file.path(template_path, "load_qc_summary.Rmd")
 
 # Kable wrappers
 kbl_table <- function(x) {
@@ -71,10 +72,12 @@ na_summary <- function(df, var) {
 
   df_pfs <- df %>%
     group_by(platform_code) %>%
-    summarise(pfs_non_na = sum(if_else(!!na_col > 0, 0, 1)), .groups = "drop") %>%
+    summarise(pfs_counts = sum(!!count_col),
+              pfs_na_counts = sum(!!na_col),
+              pfs_non_na_counts = sum(!!non_na_col), .groups = "drop") %>%
     summarise(
       pfs_tot = n(),
-      pfs_non_na = sum(pfs_non_na == n()),
+      pfs_non_na = sum(pfs_counts == pfs_non_na_counts),
       .groups = "drop"
     )
 
