@@ -1,5 +1,5 @@
 ---
-title: "Arctic Ocean In Situ Observations"
+title: "Arctic Ocean Summary Report"
 description: |
   We provide a collection of resources and summary reports containing statistics and other relevant information about the datasets.
 site: distill::distill_website
