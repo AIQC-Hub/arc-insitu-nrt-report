@@ -1,4 +1,4 @@
-# Summary Reports for the Arctic Ocean NRT and DM CTD Datasets
+# Summary Report for the Arctic Ocean NRT and DM CTD Datasets
 
 Welcome to the site. Here, we provide a collection of resources and summary reports containing statistics and other relevant information about the datasets.
 
@@ -10,7 +10,7 @@ The reports are hosted on [GitHub Pages](https://aiqc-hub.github.io/arc-insitu-n
 
 Three datasets were used to generate the reports:
 
-### BO Dataset
+### AR Dataset
 
 - **Dataset ID**: [cmems_obs-ins_arc_phybgcwav_mynrt_na_irr](https://doi.org/10.48670/moi-00031)  
 - **Duration**: History  
