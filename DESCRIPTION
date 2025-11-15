@@ -1,4 +1,4 @@
-Package: arc-insitu-nrt-report
+Package: arc-report
 Title: Summary Report for the Arctic Ocean NRT and DM CTD Datasets
 Version: 0.1.1
 Authors@R: person("Takaya", "Saito", email = "takaya.saito@outlook.com", role = c("aut", "cre"))
