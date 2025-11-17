@@ -36,3 +36,6 @@ knitr::opts_chunk$set(echo = FALSE)
     - [Salinity QC (AR)](./ar_psal_qc.html)
     - [Salinity QC (GL)](./ar_gl_psal_qc.html)
     - [Salinity QC (CORA)](./ar_cora_psal_qc.html)
+1. NRT vs CORA
+    - [NRT (AR) vs CORA](./ar_nrt_ar_vs_cora.html)
+    - [NRT (GL) vs CORA](./ar_nrt_gl_vs_cora.html)
